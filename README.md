@@ -58,6 +58,3 @@ By the end of this course, readers will be able to choose and implement the appr
 - [11.1 Glossary of Terms](./Section_11_1_Glossary_of_Terms.md)
 - [11.2 Recommended Reading](./Section_11_2_Recommended_Reading.md)
 - [11.3 Coding Exercises and Solutions](./Section_11_3_Coding_Exercises_and_Solutions.md)
-
-### 12. Index
-- [12. Index](./Section_12_Index.md)
