@@ -5,33 +5,35 @@
 
 A **tree** is a non-linear data structure that represents a hierarchy. Trees are composed of nodes, with each node containing data and a link to its child nodes. The topmost node is called the **root**, and nodes without children are called **leaf nodes**.
 
-### Basic Terms
-
-1. **Root**: The top node in the tree.
-2. **Parent**: A node that has links to other nodes (children).
-3. **Child**: A node that has a parent node above it.
-4. **Leaf**: A node with no children.
-
 ### Types of Trees
 
 1. **Binary Tree**: Each node has up to two children.
 2. **Binary Search Tree (BST)**: A binary tree where the left child is less than the parent, and the right child is greater.
 
-### Example in Go: Basic Binary Tree
+### Basic Operations and Complexity
+
+| Operation   | Description                                      | Time Complexity (BST) | Space Complexity |
+|-------------|--------------------------------------------------|-----------------------|------------------|
+| Search      | Find a node with a specific value                | O(log n) on average   | O(1)             |
+| Insertion   | Add a new node                                   | O(log n) on average   | O(1)             |
+| Deletion    | Remove a node                                    | O(log n) on average   | O(1)             |
+| Traversal   | Visit each node (e.g., In-Order, Pre-Order)      | O(n)                  | O(1)             |
+
+*Note: In the worst case (unbalanced tree), operations may degrade to O(n).
+
+### Example in Go: Binary Search Tree
 
 ```go
 package main
 
 import "fmt"
 
-// TreeNode represents a single node in a binary tree
 type TreeNode struct {
     value int
     left  *TreeNode
     right *TreeNode
 }
 
-// Insert adds a new node to the binary tree
 func (node *TreeNode) Insert(value int) {
     if value < node.value {
         if node.left == nil {
@@ -48,7 +50,6 @@ func (node *TreeNode) Insert(value int) {
     }
 }
 
-// InOrder prints the values of nodes in in-order traversal
 func (node *TreeNode) InOrder() {
     if node == nil {
         return
@@ -67,8 +68,6 @@ func main() {
     root.InOrder()
 }
 ```
-
-In this example, we define a binary tree with nodes and implement insertion and in-order traversal.
 
 ### Advantages of Trees
 

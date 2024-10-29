@@ -5,11 +5,14 @@
 
 A **stack** is a linear data structure that follows the Last-In, First-Out (LIFO) principle, meaning that the last element added is the first one removed. Stacks are used in applications like function call management, undo mechanisms, and parsing expressions.
 
-### Basic Operations on Stacks
+### Basic Operations and Complexity
 
-1. **Push**: Add an element to the top of the stack.
-2. **Pop**: Remove the element from the top of the stack.
-3. **Peek**: Retrieve the top element without removing it.
+| Operation   | Description                                  | Time Complexity | Space Complexity |
+|-------------|----------------------------------------------|-----------------|------------------|
+| Push        | Add an element to the top of the stack       | O(1)            | O(1)             |
+| Pop         | Remove the element from the top of the stack | O(1)            | O(1)             |
+| Peek        | Retrieve the top element without removing it | O(1)            | O(1)             |
+| IsEmpty     | Check if the stack is empty                  | O(1)            | O(1)             |
 
 ### Example in Go: Stack Implementation
 
@@ -23,12 +26,12 @@ type Stack struct {
     items []int
 }
 
-// Push adds an item to the stack
+// Push adds an item to the stack (O(1) time complexity)
 func (s *Stack) Push(item int) {
     s.items = append(s.items, item)
 }
 
-// Pop removes an item from the stack
+// Pop removes an item from the stack (O(1) time complexity)
 func (s *Stack) Pop() int {
     if len(s.items) == 0 {
         fmt.Println("Stack is empty")
@@ -39,7 +42,7 @@ func (s *Stack) Pop() int {
     return item
 }
 
-// Peek returns the top item without removing it
+// Peek returns the top item without removing it (O(1) time complexity)
 func (s *Stack) Peek() int {
     if len(s.items) == 0 {
         fmt.Println("Stack is empty")
@@ -57,8 +60,6 @@ func main() {
     fmt.Println("Stack after pop:", stack.items)
 }
 ```
-
-In this example, the `Stack` struct uses a slice to store items. The `Push` method adds items to the top, and `Pop` removes the top item.
 
 ### Advantages of Stacks
 

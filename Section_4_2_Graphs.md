@@ -18,6 +18,19 @@ A **graph** is a non-linear data structure that consists of a set of nodes (also
 2. **Undirected Graph**: Edges are bidirectional (like two-way streets).
 3. **Weighted Graph**: Each edge has a weight, representing the cost or distance between vertices.
 
+### Basic Operations and Complexity
+
+| Operation   | Description                                         | Time Complexity        | Space Complexity |
+|-------------|-----------------------------------------------------|------------------------|------------------|
+| Add Vertex  | Add a new vertex to the graph                       | O(1)                   | O(V + E)         |
+| Add Edge    | Add a new edge between two vertices                 | O(1)                   | O(V + E)         |
+| Remove Vertex | Remove a vertex and associated edges              | O(V + E)               | O(V + E)         |
+| Remove Edge | Remove an edge between two vertices                 | O(1) or O(V)           | O(V + E)         |
+| Search      | Check if a path exists between two vertices         | O(V + E) with BFS/DFS  | O(V + E)         |
+| Traversal   | Visit each vertex and edge (e.g., BFS, DFS)         | O(V + E)               | O(V + E)         |
+
+* V is the number of vertices, and E is the number of edges.
+
 ### Example in Go: Representing a Graph Using an Adjacency List
 
 An **adjacency list** is a common way to represent graphs. Each vertex has a list of other vertices it is connected to.
@@ -27,12 +40,10 @@ package main
 
 import "fmt"
 
-// Graph structure using adjacency list
 type Graph struct {
     vertices map[int][]int
 }
 
-// AddVertex adds a new vertex to the graph
 func (g *Graph) AddVertex(vertex int) {
     if g.vertices == nil {
         g.vertices = make(map[int][]int)
@@ -40,13 +51,11 @@ func (g *Graph) AddVertex(vertex int) {
     g.vertices[vertex] = []int{}
 }
 
-// AddEdge adds an edge between two vertices
 func (g *Graph) AddEdge(v1, v2 int) {
     g.vertices[v1] = append(g.vertices[v1], v2)
     g.vertices[v2] = append(g.vertices[v2], v1) // For undirected graph
 }
 
-// Display prints the graph's adjacency list
 func (g *Graph) Display() {
     for vertex, edges := range g.vertices {
         fmt.Printf("%d -> %v

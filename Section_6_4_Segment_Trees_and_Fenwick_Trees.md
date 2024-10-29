@@ -5,11 +5,13 @@
 
 A **segment tree** is a tree data structure that allows answering range queries and updating elements efficiently. Segment trees are often used for operations like finding the sum or minimum of elements in a range.
 
-### Basic Operations on Segment Trees
+### Basic Operations and Complexity for Segment Trees
 
-1. **Build**: Construct the segment tree based on an initial array.
-2. **Query**: Retrieve information (like sum or minimum) for a range of elements.
-3. **Update**: Modify an element and update the tree to reflect the change.
+| Operation   | Description                               | Time Complexity | Space Complexity |
+|-------------|-------------------------------------------|-----------------|------------------|
+| Build       | Construct the segment tree                | O(n)            | O(n)             |
+| Update      | Update an element in the segment tree     | O(log n)        | O(log n)         |
+| Query       | Query a range of elements                 | O(log n)        | O(log n)         |
 
 ### Example in Go: Segment Tree for Range Sum
 
@@ -23,7 +25,6 @@ type SegmentTree struct {
     arr  []int
 }
 
-// NewSegmentTree initializes the segment tree with an array
 func NewSegmentTree(arr []int) *SegmentTree {
     size := len(arr) * 4
     tree := make([]int, size)
@@ -32,7 +33,6 @@ func NewSegmentTree(arr []int) *SegmentTree {
     return st
 }
 
-// build constructs the segment tree
 func (st *SegmentTree) build(node, start, end int) {
     if start == end {
         st.tree[node] = st.arr[start]
@@ -44,7 +44,6 @@ func (st *SegmentTree) build(node, start, end int) {
     }
 }
 
-// Query range sum
 func (st *SegmentTree) Query(l, r, node, start, end int) int {
     if start > r || end < l {
         return 0
@@ -65,16 +64,16 @@ func main() {
 }
 ```
 
-In this example, we build a segment tree for range sum queries.
-
 ## Fenwick Trees (Binary Indexed Trees)
 
 A **Fenwick Tree** (or Binary Indexed Tree) is a data structure that also allows efficient range queries and updates but is simpler to implement than a segment tree.
 
-### Basic Operations on Fenwick Trees
+### Basic Operations and Complexity for Fenwick Trees
 
-1. **Update**: Increase or decrease an element.
-2. **Query**: Compute prefix sums up to a certain index.
+| Operation   | Description                               | Time Complexity | Space Complexity |
+|-------------|-------------------------------------------|-----------------|------------------|
+| Update      | Increase or decrease an element           | O(log n)        | O(n)             |
+| Query       | Compute prefix sums up to a certain index | O(log n)        | O(n)             |
 
 ### Example in Go: Fenwick Tree for Range Sum
 
@@ -87,12 +86,10 @@ type FenwickTree struct {
     tree []int
 }
 
-// NewFenwickTree initializes a Fenwick Tree
 func NewFenwickTree(size int) *FenwickTree {
     return &FenwickTree{tree: make([]int, size+1)}
 }
 
-// Update adds value to an element
 func (ft *FenwickTree) Update(index, value int) {
     for index < len(ft.tree) {
         ft.tree[index] += value
@@ -100,7 +97,6 @@ func (ft *FenwickTree) Update(index, value int) {
     }
 }
 
-// Query returns the prefix sum up to index
 func (ft *FenwickTree) Query(index int) int {
     sum := 0
     for index > 0 {
@@ -119,7 +115,15 @@ func main() {
 }
 ```
 
-In this example, we demonstrate the use of a Fenwick Tree to calculate prefix sums efficiently.
+### Advantages of Segment Trees and Fenwick Trees
+
+- **Efficient Range Queries**: Both structures provide efficient ways to calculate and update range queries.
+- **Dynamic Updates**: They allow dynamic updates to individual elements without needing to rebuild the entire structure.
+
+### Limitations
+
+- **Space Overhead**: Segment trees, in particular, require more space for efficient operation.
+- **Complexity in Implementation**: Both trees are more complex to implement than basic data structures.
 
 ---
 

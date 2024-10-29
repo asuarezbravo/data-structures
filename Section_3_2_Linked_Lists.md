@@ -11,38 +11,62 @@ A **linked list** is a linear data structure in which each element is a separate
 2. **Doubly Linked List**: Each node has links to both the next and previous nodes.
 3. **Circular Linked List**: The last node links back to the first node, creating a circular chain.
 
-### Basic Operations on Linked Lists
+### Tail Pointer Optimization
 
-1. **Insertion**: Add a new node to the beginning, end, or specific position.
-2. **Deletion**: Remove a node from the list.
-3. **Traversal**: Access each node in the sequence.
+In a linked list with a **tail pointer** (a pointer to the last node), certain operations, such as insertion at the end, can be optimized to run in constant time **O(1)**, rather than requiring traversal through the entire list.
 
-### Example in Go: Singly Linked List
+### Basic Operations and Complexity
+
+| Operation   | Description                                        | Time Complexity | Space Complexity |
+|-------------|----------------------------------------------------|-----------------|------------------|
+| Access      | Retrieve an element by its position (index)       | O(n)            | O(1)             |
+| Insertion   | Add a new node at the beginning                   | O(1)            | O(1)             |
+| Insertion   | Add a new node at the end (with tail pointer)     | O(1)            | O(1)             |
+| Deletion    | Remove a node from the beginning                  | O(1)            | O(1)             |
+| Deletion    | Remove a node from the end (with tail pointer)    | O(n) or O(1)*   | O(1)             |
+| Traversal   | Visit each element in the list                    | O(n)            | O(1)             |
+
+*Note: Deletion at the end is O(1) only if a doubly linked list is used with a tail pointer.
+
+### Example in Go: Singly Linked List with Tail Pointer
 
 ```go
 package main
 
 import "fmt"
 
-// Node represents a single node in a linked list
 type Node struct {
     data int
     next *Node
 }
 
-// LinkedList represents a singly linked list
 type LinkedList struct {
     head *Node
+    tail *Node // Tail pointer to enable O(1) insertion at the end
 }
 
-// Insert adds a new node to the beginning of the list
-func (list *LinkedList) Insert(data int) {
+// InsertAtBeginning adds a new node to the beginning of the list (O(1) time complexity)
+func (list *LinkedList) InsertAtBeginning(data int) {
     newNode := &Node{data: data}
     newNode.next = list.head
     list.head = newNode
+    if list.tail == nil { // If list was empty, set tail to the new node
+        list.tail = newNode
+    }
 }
 
-// Display prints all nodes in the list
+// InsertAtEnd adds a new node to the end of the list (O(1) with tail pointer)
+func (list *LinkedList) InsertAtEnd(data int) {
+    newNode := &Node{data: data}
+    if list.tail != nil {
+        list.tail.next = newNode
+    } else {
+        list.head = newNode
+    }
+    list.tail = newNode
+}
+
+// Display prints all nodes in the list (O(n) time complexity)
 func (list *LinkedList) Display() {
     current := list.head
     for current != nil {
@@ -54,14 +78,12 @@ func (list *LinkedList) Display() {
 
 func main() {
     list := LinkedList{}
-    list.Insert(10)
-    list.Insert(20)
-    list.Insert(30)
+    list.InsertAtBeginning(10)
+    list.InsertAtBeginning(20)
+    list.InsertAtEnd(30)
     list.Display()
 }
 ```
-
-In this example, we create a singly linked list with nodes containing integers. The `Insert` function adds a new node at the beginning of the list, and the `Display` function prints all nodes.
 
 ### Advantages of Linked Lists
 

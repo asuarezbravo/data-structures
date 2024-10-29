@@ -5,10 +5,14 @@
 
 A **disjoint set** (also known as union-find) is a data structure that keeps track of a set of elements partitioned into multiple non-overlapping subsets. Disjoint sets are useful in cases where we need to manage and track connections between items, such as in network connectivity and Kruskal’s algorithm for finding minimum spanning trees.
 
-### Basic Operations
+### Basic Operations and Complexity
 
-1. **Find**: Determine which subset a particular element belongs to.
-2. **Union**: Join two subsets into a single subset.
+| Operation   | Description                          | Time Complexity (With Path Compression and Union by Rank) |
+|-------------|--------------------------------------|----------------------------------------------------------|
+| Find        | Determine which subset an element belongs to | O(α(n))           |
+| Union       | Join two subsets into a single subset        | O(α(n))           |
+
+* α(n) is the Inverse Ackermann function, which grows very slowly, making these operations nearly constant time.
 
 ### Example in Go: Disjoint Set with Union by Rank and Path Compression
 
@@ -22,7 +26,6 @@ type DisjointSet struct {
     rank   []int
 }
 
-// NewDisjointSet initializes a new Disjoint Set
 func NewDisjointSet(size int) *DisjointSet {
     ds := &DisjointSet{
         parent: make([]int, size),
@@ -34,7 +37,6 @@ func NewDisjointSet(size int) *DisjointSet {
     return ds
 }
 
-// Find finds the root of the set containing x with path compression
 func (ds *DisjointSet) Find(x int) int {
     if ds.parent[x] != x {
         ds.parent[x] = ds.Find(ds.parent[x])
@@ -42,7 +44,6 @@ func (ds *DisjointSet) Find(x int) int {
     return ds.parent[x]
 }
 
-// Union merges two sets
 func (ds *DisjointSet) Union(x, y int) {
     rootX := ds.Find(x)
     rootY := ds.Find(y)

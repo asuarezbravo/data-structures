@@ -9,10 +9,14 @@ A **heap** is a specialized tree-based data structure that satisfies the heap pr
 
 Heaps are commonly used in priority queues and algorithms like heapsort.
 
-### Basic Operations on Heaps
+### Basic Operations and Complexity
 
-1. **Insert**: Add a new element to the heap and adjust it to maintain the heap property.
-2. **Remove**: Remove the root (highest/lowest) element and adjust the structure to maintain the heap.
+| Operation   | Description                                    | Time Complexity | Space Complexity |
+|-------------|------------------------------------------------|-----------------|------------------|
+| Insert      | Add a new element to the heap                  | O(log n)        | O(1)             |
+| Remove      | Remove the root (highest/lowest) element       | O(log n)        | O(1)             |
+| Peek        | Retrieve the root element without removing it  | O(1)            | O(1)             |
+| Build Heap  | Create a heap from an unsorted array           | O(n)            | O(1)             |
 
 ### Example in Go: Min-Heap Using the Container/Heap Package
 
@@ -26,7 +30,6 @@ import (
     "fmt"
 )
 
-// An IntHeap is a min-heap of ints.
 type IntHeap []int
 
 func (h IntHeap) Len() int           { return len(h) }

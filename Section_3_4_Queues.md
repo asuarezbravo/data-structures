@@ -5,11 +5,14 @@
 
 A **queue** is a linear data structure that follows the First-In, First-Out (FIFO) principle, meaning that the first element added is the first one removed. Queues are commonly used in scheduling tasks, managing print jobs, and handling requests in web servers.
 
-### Basic Operations on Queues
+### Basic Operations and Complexity
 
-1. **Enqueue**: Add an element to the end of the queue.
-2. **Dequeue**: Remove an element from the front of the queue.
-3. **Peek**: Retrieve the front element without removing it.
+| Operation   | Description                                     | Time Complexity | Space Complexity |
+|-------------|-------------------------------------------------|-----------------|------------------|
+| Enqueue     | Add an element to the end of the queue          | O(1)            | O(1)             |
+| Dequeue     | Remove an element from the front of the queue   | O(1)            | O(1)             |
+| Peek        | Retrieve the front element without removing it  | O(1)            | O(1)             |
+| Traversal   | Access each element in the queue                | O(n)            | O(1)             |
 
 ### Example in Go: Queue Implementation
 
@@ -18,17 +21,16 @@ package main
 
 import "fmt"
 
-// Queue structure with a slice
 type Queue struct {
     items []int
 }
 
-// Enqueue adds an item to the end of the queue
+// Enqueue adds an item to the end of the queue (O(1) time complexity)
 func (q *Queue) Enqueue(item int) {
     q.items = append(q.items, item)
 }
 
-// Dequeue removes an item from the front of the queue
+// Dequeue removes an item from the front of the queue (O(1) time complexity)
 func (q *Queue) Dequeue() int {
     if len(q.items) == 0 {
         fmt.Println("Queue is empty")
@@ -39,7 +41,7 @@ func (q *Queue) Dequeue() int {
     return item
 }
 
-// Peek returns the front item without removing it
+// Peek returns the front item without removing it (O(1) time complexity)
 func (q *Queue) Peek() int {
     if len(q.items) == 0 {
         fmt.Println("Queue is empty")
@@ -57,8 +59,6 @@ func main() {
     fmt.Println("Queue after dequeue:", queue.items)
 }
 ```
-
-In this example, the `Queue` struct uses a slice to manage items. The `Enqueue` method adds items to the end, and `Dequeue` removes the item from the front.
 
 ### Advantages of Queues
 

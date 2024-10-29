@@ -3,18 +3,22 @@
 
 ## What is an Array?
 
-An **array** is a collection of elements, typically of the same data type, arranged in a contiguous block of memory. Each element in an array is accessed using its index, which makes arrays efficient for random access.
+An **array** is a collection of elements, typically of the same data type, arranged in a contiguous block of memory. Each element in an array is accessed using its index, making arrays efficient for random access.
 
 ### Characteristics of Arrays
 
 - **Fixed Size**: The size of an array is defined at the time of its creation and cannot be changed.
 - **Efficient Access**: Accessing an element by index is fast (O(1) time complexity).
 
-### Basic Operations on Arrays
+### Basic Operations and Complexity
 
-1. **Access**: Retrieve an element by its index.
-2. **Update**: Change the value of an element at a specific index.
-3. **Traversal**: Process each element in the array sequentially.
+| Operation   | Description                                  | Time Complexity | Space Complexity |
+|-------------|----------------------------------------------|-----------------|------------------|
+| Access      | Retrieve an element by its index            | O(1)            | O(1)             |
+| Update      | Modify an element at a specific index       | O(1)            | O(1)             |
+| Traversal   | Visit each element in the array             | O(n)            | O(1)             |
+| Insertion   | Add an element (if resizing is needed)      | O(n)            | O(n)             |
+| Deletion    | Remove an element (requires shifting)       | O(n)            | O(n)             |
 
 ### Example in Go: Basic Array Operations
 
@@ -28,14 +32,14 @@ func main() {
     numbers := [5]int{10, 20, 30, 40, 50}
     fmt.Println("Array:", numbers)
 
-    // Accessing elements by index
+    // Accessing elements by index (O(1) time complexity)
     fmt.Println("Element at index 2:", numbers[2])
 
-    // Updating an element
+    // Updating an element (O(1) time complexity)
     numbers[3] = 100
     fmt.Println("Updated Array:", numbers)
 
-    // Traversing the array
+    // Traversing the array (O(n) time complexity)
     fmt.Println("Array elements:")
     for i := 0; i < len(numbers); i++ {
         fmt.Printf("Index %d: %d
@@ -43,8 +47,6 @@ func main() {
     }
 }
 ```
-
-In this example, we create an array called `numbers` with 5 integers. We access, update, and traverse the array, displaying each element.
 
 ### Advantages of Arrays
 

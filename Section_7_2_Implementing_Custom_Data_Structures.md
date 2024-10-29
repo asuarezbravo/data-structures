@@ -16,7 +16,15 @@ Sometimes, standard data structures don’t meet the specific needs of an applic
 
 A **priority queue** is a data structure where each element is assigned a priority, and the element with the highest priority is served before others.
 
-#### Priority Queue Implementation
+#### Priority Queue Implementation with Big O Complexity
+
+| Operation   | Description                             | Time Complexity | Space Complexity |
+|-------------|-----------------------------------------|-----------------|------------------|
+| Insert      | Add an element based on its priority    | O(log n)        | O(n)             |
+| Remove      | Remove the highest-priority element     | O(log n)        | O(n)             |
+| Peek        | Access the highest-priority element     | O(1)            | O(1)             |
+
+#### Implementation Example in Go
 
 ```go
 package main
@@ -26,7 +34,7 @@ import (
     "fmt"
 )
 
-// Item is a structure representing an element with priority
+// Item represents an element with priority
 type Item struct {
     value    string
     priority int
@@ -65,7 +73,7 @@ func main() {
 }
 ```
 
-In this example, we define a custom priority queue using Go’s `container/heap` package.
+In this example, we use Go’s `container/heap` package to manage the priority queue.
 
 ### Advantages of Custom Data Structures
 

@@ -5,11 +5,16 @@
 
 A **trie** (also known as a prefix tree) is a tree-like data structure used to store strings in a way that enables efficient searching, insertion, and retrieval of words or prefixes. Tries are commonly used in applications such as autocomplete and spell-checking.
 
-### Basic Trie Operations
+### Basic Operations and Complexity
 
-1. **Insert**: Add a word to the trie.
-2. **Search**: Check if a word exists in the trie.
-3. **Prefix Search**: Check if any word in the trie starts with a given prefix.
+| Operation   | Description                                        | Time Complexity | Space Complexity |
+|-------------|----------------------------------------------------|-----------------|------------------|
+| Insert      | Add a word to the trie                             | O(m)            | O(m * n)         |
+| Search      | Check if a word exists in the trie                 | O(m)            | O(1)             |
+| Prefix Search | Check if any word in the trie starts with a prefix | O(m)          | O(1)             |
+| Delete      | Remove a word from the trie                        | O(m)            | O(1)             |
+
+* Here, **m** is the length of the word being inserted/searched, and **n** is the total number of words.
 
 ### Example in Go: Simple Trie Implementation
 
@@ -27,12 +32,10 @@ type Trie struct {
     root *TrieNode
 }
 
-// NewTrie initializes a new Trie
 func NewTrie() *Trie {
     return &Trie{root: &TrieNode{children: make(map[rune]*TrieNode)}}
 }
 
-// Insert adds a word to the Trie
 func (t *Trie) Insert(word string) {
     node := t.root
     for _, char := range word {
@@ -44,7 +47,6 @@ func (t *Trie) Insert(word string) {
     node.isEnd = true
 }
 
-// Search checks if a word is in the Trie
 func (t *Trie) Search(word string) bool {
     node := t.root
     for _, char := range word {
