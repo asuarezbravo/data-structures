@@ -61,4 +61,4 @@ In this example, the factorial is calculated by looping through the values from 
 
 ---
 
-[Continue to 3.1 Arrays](./3_1_Arrays.md)
+[Continue to 3.1 Arrays](./Section_3_1_Arrays.md)

@@ -55,4 +55,4 @@ In this example, the `Stack` struct has `Push` and `Pop` methods that allow stac
 
 ---
 
-[Continue to 2.2 Big O Notation and Complexity Analysis](./2_2_Big_O_Notation_and_Complexity_Analysis.md)
+[Continue to 2.2 Big O Notation and Complexity Analysis](./Section_2_2_Big_O_Notation_and_Complexity_Analysis.md)

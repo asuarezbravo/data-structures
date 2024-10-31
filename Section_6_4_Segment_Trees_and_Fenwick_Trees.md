@@ -127,4 +127,4 @@ func main() {
 
 ---
 
-[Continue to 7.1 Choosing the Right Data Structure](./7_1_Choosing_the_Right_Data_Structure.md)
+[Continue to 7.1 Choosing the Right Data Structure](./Section_7_1_Choosing_the_Right_Data_Structure.md)

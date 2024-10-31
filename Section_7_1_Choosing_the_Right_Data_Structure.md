@@ -33,4 +33,4 @@ Choosing the appropriate data structure for a specific problem or project is cru
 
 ---
 
-[Continue to 7.2 Implementing Custom Data Structures](./7_2_Implementing_Custom_Data_Structures.md)
+[Continue to 7.2 Implementing Custom Data Structures](./Section_7_2_Implementing_Custom_Data_Structures.md)

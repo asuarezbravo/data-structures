@@ -83,4 +83,4 @@ In this example, we implement a simple trie with insertion and search functional
 
 ---
 
-[Continue to 6.3 Disjoint Set](./6_3_Disjoint_Set.md)
+[Continue to 6.3 Disjoint Set](./Section_6_3_Disjoint_Set.md)

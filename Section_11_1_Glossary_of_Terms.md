@@ -20,4 +20,4 @@ This glossary provides definitions for key terms covered in this guide on data s
 
 ---
 
-[Continue to 11.2 Recommended Reading](./11_2_Recommended_Reading.md)
+[Continue to 11.2 Recommended Reading](./Section_11_2_Recommended_Reading.md)

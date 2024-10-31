@@ -36,4 +36,4 @@ Below are some recommended resources to further explore data structures, algorit
 
 ---
 
-[Continue to 11.3 Coding Exercises and Solutions](./11_3_Coding_Exercises_and_Solutions.md)
+[Continue to 11.3 Coding Exercises and Solutions](./Section_11_3_Coding_Exercises_and_Solutions.md)

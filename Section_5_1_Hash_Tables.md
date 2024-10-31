@@ -60,4 +60,4 @@ In this example, we create a hash table to store and retrieve values associated 
 
 ---
 
-[Continue to 5.2 Collision Resolution Techniques](./5_2_Collision_Resolution_Techniques.md)
+[Continue to 5.2 Collision Resolution Techniques](./Section_5_2_Collision_Resolution_Techniques.md)

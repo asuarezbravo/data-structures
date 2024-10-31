@@ -88,4 +88,4 @@ In this example, we define a graph with vertices and edges and display the adjac
 
 ---
 
-[Continue to 5.1 Hash Tables](./5_1_Hash_Tables.md)
+[Continue to 5.1 Hash Tables](./Section_5_1_Hash_Tables.md)

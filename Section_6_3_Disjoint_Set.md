@@ -81,4 +81,4 @@ In this example, we use union by rank and path compression to optimize `Find` an
 
 ---
 
-[Continue to 6.4 Segment Trees and Fenwick Trees](./6_4_Segment_Trees_and_Fenwick_Trees.md)
+[Continue to 6.4 Segment Trees and Fenwick Trees](./Section_6_4_Segment_Trees_and_Fenwick_Trees.md)

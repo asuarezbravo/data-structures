@@ -77,4 +77,4 @@ func main() {
 
 ---
 
-[Continue to 3.4 Queues](./3_4_Queues.md)
+[Continue to 3.4 Queues](./Section_3_4_Queues.md)

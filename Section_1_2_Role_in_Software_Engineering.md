@@ -40,4 +40,4 @@ In this example, a map (hash table) is used to store sessions. Each session ID m
 
 ---
 
-[Continue to 1.3 Overview of Types of Data Structures](./1_3_Overview_of_Types_of_Data_Structures.md)
+[Continue to 1.3 Overview of Types of Data Structures](./Section_1_3_Overview_of_Types_of_Data_Structures.md)

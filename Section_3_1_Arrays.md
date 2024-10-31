@@ -64,4 +64,4 @@ func main() {
 
 ---
 
-[Continue to 3.2 Linked Lists](./3_2_Linked_Lists.md)
+[Continue to 3.2 Linked Lists](./Section_3_2_Linked_Lists.md)

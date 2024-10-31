@@ -87,4 +87,4 @@ In this example, we use Go’s `container/heap` package to manage the priority q
 
 ---
 
-[Continue to 8.1 Data Structures in Databases](./8_1_Data_Structures_in_Databases.md)
+[Continue to 8.1 Data Structures in Databases](./Section_8_1_Data_Structures_in_Databases.md)

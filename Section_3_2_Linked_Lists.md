@@ -101,4 +101,4 @@ func main() {
 
 ---
 
-[Continue to 3.3 Stacks](./3_3_Stacks.md)
+[Continue to 3.3 Stacks](./Section_3_3_Stacks.md)

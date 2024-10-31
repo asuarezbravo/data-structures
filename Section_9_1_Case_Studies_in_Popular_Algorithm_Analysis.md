@@ -55,4 +55,4 @@ In this example, `binarySearch` demonstrates how the algorithm efficiently finds
 
 ---
 
-[Continue to 10.1 Conclusion and Future Trends in Data Structures](./10_1_Conclusion_and_Future_Trends_in_Data_Structures.md)
+[Continue to 10.1 Conclusion and Future Trends in Data Structures](./Section_10_1_Conclusion_and_Future_Trends_in_Data_Structures.md)

@@ -57,4 +57,4 @@ In this example, we define a simple B+ tree-like structure to store key-value pa
 
 ---
 
-[Continue to 8.2 Data Structures in Web Development](./8_2_Data_Structures_in_Web_Development.md)
+[Continue to 8.2 Data Structures in Web Development](./Section_8_2_Data_Structures_in_Web_Development.md)

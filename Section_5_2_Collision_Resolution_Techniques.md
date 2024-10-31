@@ -90,4 +90,4 @@ Here, `Alice` and `Bob` collide, and linear probing finds the next open slot for
 
 ---
 
-[Continue to 6.1 Heaps](./6_1_Heaps.md)
+[Continue to 6.1 Heaps](./Section_6_1_Heaps.md)

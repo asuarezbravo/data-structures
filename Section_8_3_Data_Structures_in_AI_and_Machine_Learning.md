@@ -44,4 +44,4 @@ In this example, `addMatrices` performs element-wise addition on two matrices.
 
 ---
 
-[Continue to 9.1 Case Studies in Popular Algorithm Analysis](./9_1_Case_Studies_in_Popular_Algorithm_Analysis.md)
+[Continue to 9.1 Case Studies in Popular Algorithm Analysis](./Section_9_1_Case_Studies_in_Popular_Algorithm_Analysis.md)

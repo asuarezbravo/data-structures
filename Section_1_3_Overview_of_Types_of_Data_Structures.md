@@ -70,4 +70,4 @@ These structures, including heaps, tries, disjoint sets, and segment trees, hand
 
 ---
 
-[Continue to 2.1 Abstract Data Types (ADTs)](./2_1_Abstract_Data_Types_ADTs.md)
+[Continue to 2.1 Abstract Data Types (ADTs)](./Section_2_1_Abstract_Data_Types_ADTs.md)

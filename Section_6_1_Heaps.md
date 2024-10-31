@@ -70,4 +70,4 @@ In this example, `IntHeap` implements a min-heap by defining methods for pushing
 
 ---
 
-[Continue to 6.2 Tries](./6_2_Tries.md)
+[Continue to 6.2 Tries](./Section_6_2_Tries.md)

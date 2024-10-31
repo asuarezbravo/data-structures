@@ -62,4 +62,4 @@ In this example, a `Queue` struct is used to manage tasks, demonstrating how bac
 
 ---
 
-[Continue to 8.3 Data Structures in AI and Machine Learning](./8_3_Data_Structures_in_AI_and_Machine_Learning.md)
+[Continue to 8.3 Data Structures in AI and Machine Learning](./Section_8_3_Data_Structures_in_AI_and_Machine_Learning.md)

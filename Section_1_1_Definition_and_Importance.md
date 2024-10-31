@@ -36,4 +36,4 @@ In this example, an array is used to store a fixed list of contacts, allowing us
 
 ---
 
-[Continue to 1.2 Role in Software Engineering](./1_2_Role_in_Software_Engineering.md)
+[Continue to 1.2 Role in Software Engineering](./Section_1_2_Role_in_Software_Engineering.md)
