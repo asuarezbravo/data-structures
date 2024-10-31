@@ -5,6 +5,10 @@
 
 A **stack** is a linear data structure that follows the Last-In, First-Out (LIFO) principle, meaning that the last element added is the first one removed. Stacks are used in applications like function call management, undo mechanisms, and parsing expressions.
 
+<p align="center">
+  <img src="./images/stack.jpg" />
+</p>
+
 ### Basic Operations and Complexity
 
 | Operation   | Description                                  | Time Complexity | Space Complexity |

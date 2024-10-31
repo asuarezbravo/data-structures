@@ -5,6 +5,10 @@
 
 An **array** is a collection of elements, typically of the same data type, arranged in a contiguous block of memory. Each element in an array is accessed using its index, making arrays efficient for random access.
 
+<p align="center">
+  <img src="./images/array.jpg" />
+</p>
+
 ### Characteristics of Arrays
 
 - **Fixed Size**: The size of an array is defined at the time of its creation and cannot be changed.

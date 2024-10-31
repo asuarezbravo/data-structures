@@ -5,6 +5,10 @@
 
 A **queue** is a linear data structure that follows the First-In, First-Out (FIFO) principle, meaning that the first element added is the first one removed. Queues are commonly used in scheduling tasks, managing print jobs, and handling requests in web servers.
 
+<p align="center">
+  <img src="./images/queue.jpg" />
+</p>
+
 ### Basic Operations and Complexity
 
 | Operation   | Description                                     | Time Complexity | Space Complexity |

@@ -11,6 +11,10 @@ A **linked list** is a linear data structure in which each element is a separate
 2. **Doubly Linked List**: Each node has links to both the next and previous nodes.
 3. **Circular Linked List**: The last node links back to the first node, creating a circular chain.
 
+<p align="center">
+  <img src="./images/linked_list.jpg" />
+</p>
+
 ### Tail Pointer Optimization
 
 In a linked list with a **tail pointer** (a pointer to the last node), certain operations, such as insertion at the end, can be optimized to run in constant time **O(1)**, rather than requiring traversal through the entire list.

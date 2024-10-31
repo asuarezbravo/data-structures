@@ -5,10 +5,32 @@
 
 A **tree** is a non-linear data structure that represents a hierarchy. Trees are composed of nodes, with each node containing data and a link to its child nodes. The topmost node is called the **root**, and nodes without children are called **leaf nodes**.
 
+<p align="center">
+  <img src="./images/tree.jpg" />
+</p>
+
 ### Types of Trees
 
-1. **Binary Tree**: Each node has up to two children.
-2. **Binary Search Tree (BST)**: A binary tree where the left child is less than the parent, and the right child is greater.
+Trees come in various types, each with specific characteristics and uses. Below is a breakdown of general trees, binary trees, and binary search trees, along with their unique properties.
+
+#### General Trees
+
+- **Structure**: In a general tree, each node can have any number of child nodes, allowing more flexible hierarchical representation.
+- **Properties**:
+  - Each node may have multiple children.
+  - There are no constraints on child positioning or ordering.
+- **Use Cases**:
+  - Useful for structures without strict child constraints, like XML or HTML documents and file systems.
+
+#### Binary Trees
+
+1. **Binary Tree**: Each node has up to two children, commonly referred to as the left and right children.
+   - **Full Binary Tree**: Every node has either 0 or 2 children.
+   - **Complete Binary Tree**: All levels, except possibly the last, are fully filled, with nodes as left-aligned as possible.
+   - **Perfect Binary Tree**: All levels are fully filled, and every internal node has exactly two children.
+2. **Binary Search Tree (BST)**: A specialized binary tree where:
+   - The left child is less than the parent, and the right child is greater.
+   - This ordering enables efficient searching, insertion, and deletion operations.
 
 ### Basic Operations and Complexity
 
