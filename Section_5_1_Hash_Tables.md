@@ -5,6 +5,10 @@
 
 A **hash table** is a data structure that stores key-value pairs. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. Hash tables are used for fast data retrieval and are widely used in database indexing, caching, and associative arrays.
 
+<p align="center">
+  <img src="./images/hash_table.jpg" />
+</p>
+
 ### How Hashing Works
 
 1. **Key**: The unique identifier for data.

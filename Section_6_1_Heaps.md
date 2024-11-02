@@ -9,6 +9,10 @@ A **heap** is a specialized tree-based data structure that satisfies the heap pr
 
 Heaps are commonly used in priority queues and algorithms like heapsort.
 
+<p align="center">
+  <img src="./images/heap.jpg" />
+</p>
+
 ### Basic Operations and Complexity
 
 | Operation   | Description                                    | Time Complexity | Space Complexity |

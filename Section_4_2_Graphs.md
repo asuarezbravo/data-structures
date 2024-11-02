@@ -18,6 +18,10 @@ A **graph** is a non-linear data structure that consists of a set of nodes (also
 2. **Undirected Graph**: Edges are bidirectional (like two-way streets).
 3. **Weighted Graph**: Each edge has a weight, representing the cost or distance between vertices.
 
+<p align="center">
+  <img src="./images/graph.jpg" />
+</p>
+
 ### Basic Operations and Complexity
 
 | Operation   | Description                                         | Time Complexity        | Space Complexity |

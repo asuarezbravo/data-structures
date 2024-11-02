@@ -5,6 +5,10 @@
 
 A **trie** (also known as a prefix tree) is a tree-like data structure used to store strings in a way that enables efficient searching, insertion, and retrieval of words or prefixes. Tries are commonly used in applications such as autocomplete and spell-checking.
 
+<p align="center">
+  <img src="./images/trie.jpg" />
+</p>
+
 ### Basic Operations and Complexity
 
 | Operation   | Description                                        | Time Complexity | Space Complexity |
